@@ -242,7 +242,7 @@ const SecretMessageDecoder = () => {
             <p className="text-sm uppercase tracking-widest text-primary mb-4">Access Granted: First Memory Unlocked</p>
             <div className="bg-white p-4 shadow-lg max-w-sm mx-auto rotate-[-2deg]">
               <img
-                src="/gigi/1.png"
+                src="/Couple_Picture/couple_pic.jpeg"
                 alt="Priya and Neel's first memory"
                 className="w-full aspect-square object-cover"
               />

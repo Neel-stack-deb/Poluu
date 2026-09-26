@@ -14,31 +14,31 @@ interface MemoriesPageProps {
 const memories = [
   {
     id: 1,
-    image: "/gigi/1.png",
+    image: "/Polu/2.jpeg",
     caption: "Those beautiful eyes",
     description: "Your eyes make even the busiest day feel soft and beautiful.",
   },
   {
     id: 2,
-    image: "/gigi/2.png",
+    image: "/Polu/1.jpeg",
     caption: "Your lovely curls",
     description: "Your curly hair has its own little magic, and I could admire it forever.",
   },
   {
     id: 3,
-    image: "/gigi/3.png",
+    image: "/Polu/3.jpeg",
     caption: "That cute smile",
     description: "Your smile is my favorite kind of sunshine.",
   },
   {
     id: 4,
-    image: "/gigi/4.png",
+    image: "/Polu/4.jpeg",
     caption: "The way you look at me",
     description: "One look from you is enough to make my whole heart smile.",
   },
   {
     id: 5,
-    image: "/gigi/5.png",
+    image: "/Polu/5.jpeg",
     caption: "Your sweet voice",
     description: "Your voice is my favorite sound, especially when you say my name.",
   },
@@ -67,6 +67,10 @@ const MemoryCard = ({ memory, index }: { memory: typeof memories[0]; index: numb
             src={memory.image}
             alt={memory.caption}
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            onError={(event) => {
+              event.currentTarget.onerror = null;
+              event.currentTarget.src = "/Polu/3.jpeg";
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
         </motion.div>

@@ -209,7 +209,7 @@ const LockPage = ({ onComplete, onAccessGranted }: LockPageProps) => {
 
                                 <div className="rounded-none overflow-hidden shadow-[0_0_80px_rgba(255,255,255,0.05)] border-4 border-white translate-y-0">
                                     <img
-                                        src="/gigi/gigi main.png"
+                                        src="/Polu/Polu_main.jpeg"
                                         alt="Priya"
                                         className="w-full h-auto object-cover"
                                     />

@@ -21,7 +21,7 @@ const AudioTransmissionPage = ({ onComplete }: AudioTransmissionPageProps) => {
         <div className="rounded-2xl bg-white/85 p-7 shadow-elevated">
           <p className="text-foreground font-medium mb-2">Status: Encrypted | Playback: Unlimited</p>
           <p className="text-muted-foreground leading-relaxed mb-6">For late nights, stressful days, or whenever you need to be reminded how loved you are. Press play.</p>
-          <audio className="w-full" controls preload="metadata" src="/Voice_Recorder/Tere%20Liye.mp3" aria-label="Audio transmission for Priya" />
+          <audio className="w-full" controls preload="metadata" src="/Voice_Recorder/voice_record.mpeg" aria-label="Audio transmission for Priya" />
         </div>
         <button className="btn-romantic mt-10" onClick={() => { playSound('buttonClick'); onComplete(); }}>Open the final question</button>
       </motion.div>

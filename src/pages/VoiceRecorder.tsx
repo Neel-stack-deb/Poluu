@@ -170,7 +170,7 @@ const VoiceRecorder = () => {
             className="w-full"
             controls
             preload="metadata"
-            src="/Voice_Recorder/Tere%20Liye.mp3"
+            src="/Voice_Recorder/voice_record.mpeg"
             aria-label="Recorded prompt for Priya"
           />
         </motion.div>
