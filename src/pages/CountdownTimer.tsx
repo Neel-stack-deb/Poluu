@@ -7,7 +7,11 @@ import { useSound } from '@/hooks/useSound';
 const CountdownTimer = () => {
   const [targetDate, setTargetDate] = useState(() => {
     const saved = localStorage.getItem('countdownTarget');
-    return saved || '';
+    if (saved) return saved;
+    const today = new Date();
+    const nextAnniversary = new Date(today.getFullYear(), today.getMonth(), 26);
+    if (nextAnniversary <= today) nextAnniversary.setMonth(nextAnniversary.getMonth() + 1);
+    return nextAnniversary.toISOString().slice(0, 16);
   });
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [isActive, setIsActive] = useState(false);
@@ -90,10 +94,10 @@ const CountdownTimer = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-6xl font-heavy text-primary mb-4">
-            Countdown to Our Special Day
+            Countdown to the 26th
           </h1>
           <p className="text-muted-foreground font-serif-italic text-lg mb-12">
-            {dailyMessage || 'Set a date to start counting down'}
+            {dailyMessage || 'Every 26th is another month of us'}
           </p>
         </motion.div>
 

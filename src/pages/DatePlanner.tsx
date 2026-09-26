@@ -8,7 +8,6 @@ interface DatePlan {
   date: string;
   time: string;
   activity: string;
-  location: string;
   notes: string;
 }
 
@@ -22,25 +21,15 @@ const DatePlanner = () => {
     date: '',
     time: '',
     activity: '',
-    location: '',
     notes: '',
   });
   const [isEditing, setIsEditing] = useState(false);
   const { playSound } = useSound();
 
   const activitySuggestions = [
-    'Romantic Dinner',
-    'Movie Night',
-    'Picnic in the Park',
-    'Stargazing',
-    'Coffee Date',
-    'Museum Visit',
-    'Beach Walk',
-    'Cooking Together',
-    'Dance Class',
-    'Art Gallery',
-    'Concert',
-    'Hiking',
+    'Tacos, Subway, Momos & Biryani at College Food Street',
+    'Movie Night, holding hands the entire time',
+    'Try all of Priya\'s food suggestions',
   ];
 
   const savePlan = () => {
@@ -60,7 +49,7 @@ const DatePlanner = () => {
 
     setPlans(updated);
     localStorage.setItem('datePlans', JSON.stringify(updated));
-    setCurrentPlan({ id: '', date: '', time: '', activity: '', location: '', notes: '' });
+    setCurrentPlan({ id: '', date: '', time: '', activity: '', notes: '' });
     setIsEditing(false);
     playSound('success');
   };
@@ -146,14 +135,6 @@ const DatePlanner = () => {
             className="w-full px-4 py-2 mb-4 rounded-lg border-2 border-primary/30 focus:border-primary focus:outline-none"
           />
 
-          <input
-            type="text"
-            placeholder="Location..."
-            value={currentPlan.location}
-            onChange={(e) => setCurrentPlan({ ...currentPlan, location: e.target.value })}
-            className="w-full px-4 py-2 mb-4 rounded-lg border-2 border-primary/30 focus:border-primary focus:outline-none"
-          />
-
           <textarea
             placeholder="Notes..."
             value={currentPlan.notes}
@@ -168,7 +149,7 @@ const DatePlanner = () => {
             {isEditing && (
               <button
                 onClick={() => {
-                  setCurrentPlan({ id: '', date: '', time: '', activity: '', location: '', notes: '' });
+                  setCurrentPlan({ id: '', date: '', time: '', activity: '', notes: '' });
                   setIsEditing(false);
                 }}
                 className="px-4 py-2 bg-muted text-muted-foreground rounded-lg"
@@ -204,9 +185,6 @@ const DatePlanner = () => {
                         <p className="text-sm text-muted-foreground">
                           {new Date(plan.date).toLocaleDateString()} {plan.time && `at ${plan.time}`}
                         </p>
-                        {plan.location && (
-                          <p className="text-sm text-muted-foreground">📍 {plan.location}</p>
-                        )}
                       </div>
                       <div className="flex gap-2">
                         <button onClick={() => editPlan(plan)} className="text-primary">Edit</button>

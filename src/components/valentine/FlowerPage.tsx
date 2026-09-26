@@ -3,6 +3,7 @@ import TulipIcon from './icons/TulipIcon';
 import DaisyIcon from './icons/DaisyIcon';
 import LilyIcon from './icons/LilyIcon';
 import FourLeafCloverIcon from './icons/FourLeafCloverIcon';
+import FlowerIcon from './icons/FlowerIcon';
 import FloatingHearts from './FloatingHearts';
 import { useSound } from '../../hooks/useSound';
 
@@ -66,15 +67,15 @@ const FlowerPage = ({ onComplete }: FlowerPageProps) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
       >
-        {/* Tulip */}
+        {/* Carnation */}
         <motion.div
           className="flex flex-col items-center text-center max-w-xs"
           whileHover={{ scale: 1.05 }}
         >
-          <TulipIcon 
+          <FlowerIcon
             size={120} 
             color="hsl(350, 60%, 65%)" 
-            delay={1}
+            animate
           />
           <motion.p
             className="text-lg font-serif-italic text-foreground mt-4"
@@ -82,7 +83,7 @@ const FlowerPage = ({ onComplete }: FlowerPageProps) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 2.5 }}
           >
-            Tulip
+            Carnation
           </motion.p>
           <motion.p
             className="text-sm text-muted-foreground mt-2"
@@ -90,18 +91,19 @@ const FlowerPage = ({ onComplete }: FlowerPageProps) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 2.7 }}
           >
-            Your most favorite flower. Although u have lots of favorites, somehow it's Priya's trademark. Tulips always remind me of your warmth. Just like how the sun radiates in your eyes, ahahaha, you look so beautiful. Being with you feels like coming home, always.
+            Polu, carnations remind me of the way you love: soft, sincere, and quietly strong. Every petal feels like a little thank-you for making ordinary days feel special.
           </motion.p>
         </motion.div>
         
-        {/* Daisy */}
+        {/* White Roses */}
         <motion.div
           className="flex flex-col items-center text-center max-w-xs"
           whileHover={{ scale: 1.05 }}
         >
-          <DaisyIcon 
+          <FlowerIcon
             size={110} 
-            delay={1.5}
+            color="white"
+            animate
           />
           <motion.p
             className="text-lg font-serif-italic text-foreground mt-4"
@@ -109,7 +111,7 @@ const FlowerPage = ({ onComplete }: FlowerPageProps) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 3 }}
           >
-            Daisy
+            White Roses
           </motion.p>
           <motion.p
             className="text-sm text-muted-foreground mt-2"
@@ -117,7 +119,7 @@ const FlowerPage = ({ onComplete }: FlowerPageProps) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 3.2 }}
           >
-            It's my favorite flower and I always get them from you. I actually don't have a particular favorite in mind, but ever since we talked, all I could ever think of is daisy. Also, we did say we'll always try for each other. As for me, I'll be welcoming new beginnings of me to do better. That's why I love daisies, as they also mean new beginnings. Every daisy from you reminds me of your thoughtfulness. They make me feel loved in a way that words cannot fully capture.
+            Mishti, white roses feel like you: gentle, beautiful, and full of a love that makes everything around you calmer. I would choose you, and these roses, in every lifetime.
           </motion.p>
         </motion.div>
         
@@ -145,7 +147,7 @@ const FlowerPage = ({ onComplete }: FlowerPageProps) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 3.7 }}
           >
-            This is your new favorite. I kept giving em to you, as they are as pretty as u :3 This is a Mishti flower and, aside from tulips, u r the only one in mind that comes across. Lilies feel delicate yet strong, just like you. I love how they reflect your beauty and I just cant explain u look so UGHHHH ESPECIALLY IF MAG FT TAYO! I love lilies din kasi pang bading yan na flower ehahahah anws. Every time I see them, I think of how lucky I am to have you in my life.
+            Lilies feel delicate yet strong, just like you. Every time I see them, I think of how lucky I am to have you in my life.
           </motion.p>
         </motion.div>
         
