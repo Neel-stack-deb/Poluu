@@ -110,8 +110,6 @@ const features = [
   },
 ];
 
-const MotionLink = motion(Link);
-
 const Home = () => {
   const { playSound } = useSound();
 
@@ -221,22 +219,6 @@ const Home = () => {
           ))}
         </div>
 
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2 }}
-        >
-          <MotionLink
-            to="/"
-            onClick={() => playSound('sparkle')}
-            className="inline-block px-10 py-5 btn-romantic text-xl font-medium shadow-elevated"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Start Valentine's Journey
-          </MotionLink>
-        </motion.div>
       </div>
     </div>
   );
