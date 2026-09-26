@@ -145,12 +145,16 @@ const VoiceRecorder = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <h1 className="text-4xl md:text-5xl font-heavy text-primary mb-4">
-            Voice Message Recorder
+            Audio Transmission #05 // Frequency: Priya
           </h1>
           <p className="text-muted-foreground font-serif-italic">
-            Record and share your voice messages
+            Status: Encrypted | Playback: Unlimited.
           </p>
         </motion.div>
+
+        <p className="text-center text-muted-foreground font-serif-italic mb-8">
+          For late nights, stressful days, or whenever you need to be reminded how loved you are. Press play.
+        </p>
 
         {/* Recorder */}
         <motion.div
@@ -209,7 +213,7 @@ const VoiceRecorder = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          <h2 className="text-2xl font-medium mb-4">Your Voice Messages</h2>
+          <h2 className="text-2xl font-medium mb-4">Private Transmission Vault</h2>
           {messages.length === 0 ? (
             <p className="text-center text-muted-foreground py-12">
               No voice messages yet. Start recording to create your first message!

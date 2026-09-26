@@ -120,7 +120,7 @@ const QuestionPage = ({ onComplete }: QuestionPageProps) => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
               >
-                So, Polu, I have one last question.
+                Contract Renewal: Month 6 & Beyond
               </motion.p>
 
               <motion.h2
@@ -136,7 +136,7 @@ const QuestionPage = ({ onComplete }: QuestionPageProps) => {
                   repeat: Infinity
                 } : { delay: 1.5, duration: 0.8 }}
               >
-                Will you be my Valentine?
+                Five months down, a lifetime to explore. Priya, will you do me the honor of being my favorite adventure for the next month (and every month after)?
               </motion.h2>
 
               {/* Dudu reaction on No clicks */}
@@ -195,7 +195,7 @@ const QuestionPage = ({ onComplete }: QuestionPageProps) => {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <span className="flex items-center gap-2">
-                    Yes
+                    Yes, absolutely
                     <HeartIcon size={18} color="white" />
                   </span>
                 </motion.button>
@@ -215,7 +215,7 @@ const QuestionPage = ({ onComplete }: QuestionPageProps) => {
                   whileHover={{ scale: Math.max(0.4, 0.95 - noClickCount * 0.05) }}
 
                 >
-                  No
+                  Let me think... wait, YES
                 </motion.button>
               </motion.div>
 

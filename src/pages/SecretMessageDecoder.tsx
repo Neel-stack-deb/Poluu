@@ -17,48 +17,30 @@ interface Puzzle {
 const puzzles: Puzzle[] = [
   {
     id: 1,
-    type: 'caesar',
+    type: 'substitution',
     difficulty: 'easy',
-    encoded: 'Kpio cp f yknn',
-    decoded: 'Love is a gift',
-    hint: 'Shift each letter back by 2',
-    reward: '💕',
+    encoded: '4 × 26',
+    decoded: '104',
+    hint: 'Where time officially started: Month × Day',
+    reward: '📸',
   },
   {
     id: 2,
-    type: 'reverse',
+    type: 'morse',
     difficulty: 'easy',
-    encoded: 'uoy evol I',
-    decoded: 'I love you',
-    hint: 'Read it backwards',
-    reward: '❤️',
+    encoded: '66 61 76 6F 72 69 74 65',
+    decoded: 'Polu',
+    hint: 'Translate the frequency into words. Decode the ASCII/Hex string to spell Polu.',
+    reward: '🎵',
   },
   {
     id: 3,
-    type: 'substitution',
+    type: 'reverse',
     difficulty: 'medium',
-    encoded: 'YBLF ZPV',
-    decoded: 'LOVE YOU',
-    hint: 'Each letter is shifted forward by 1',
+    encoded: 'I LOVE YOU SO MUCH',
+    decoded: 'I LOVE YOU SO MUCH',
+    hint: 'Unscramble the letters to reveal what five months with you has proven.',
     reward: '💖',
-  },
-  {
-    id: 4,
-    type: 'morse',
-    difficulty: 'medium',
-    encoded: '.-.. --- ...- . / -.-- --- ..-',
-    decoded: 'LOVE YOU',
-    hint: 'Morse code: . = dot, - = dash',
-    reward: '🌹',
-  },
-  {
-    id: 5,
-    type: 'caesar',
-    difficulty: 'hard',
-    encoded: 'Qxgt vjg yqtm',
-    decoded: 'Meet the world',
-    hint: 'Shift back by 2',
-    reward: '✨',
   },
 ];
 
@@ -124,7 +106,7 @@ const SecretMessageDecoder = () => {
             Secret Message Decoder
           </h1>
           <p className="text-muted-foreground font-serif-italic">
-            Decode hidden messages and unlock rewards
+            Three clues, one story: five months of Priya & Neel
           </p>
         </motion.div>
 
@@ -183,6 +165,11 @@ const SecretMessageDecoder = () => {
                   {puzzles[currentPuzzle].encoded}
                 </p>
               </div>
+              <p className="text-sm text-muted-foreground mb-4 text-center">
+                {currentPuzzle === 0 && 'Solved clue unlocks: First Memory Unlocked. Add your first-date polaroid here.'}
+                {currentPuzzle === 1 && 'Solved clue unlocks: Add your couple-song playlist here.'}
+                {currentPuzzle === 2 && 'Solved clue unlocks: The full love letter and final question.'}
+              </p>
 
               <AnimatePresence>
                 {showHint && (
@@ -236,9 +223,15 @@ const SecretMessageDecoder = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
           >
-            <h2 className="text-3xl font-medium mb-4">🎉 Congratulations! 🎉</h2>
+            <h2 className="text-3xl font-medium mb-4">Access Granted: First Memory Unlocked.</h2>
+            <div className="text-left text-lg text-muted-foreground mb-6 whitespace-pre-line">
+              {'Priya,\n\nFive months ago, you walked into my world, and somehow you\'ve managed to turn ordinary days into my absolute favorite memories. It feels like both yesterday and an entire lifetime wrapped into one.\n\nThank you for the easy laughter, the random late-night chats, the warmth you bring every single day, and the way you make loving you feel like the most natural thing in the world. 150-something days with you, and my favorite place is still anywhere you are.\n\nYou\'ve made it through the clues, but there\'s one last prompt left...'}
+            </div>
+            <p className="text-xl font-medium mb-6">
+              Contract Renewal: Month 6 & Beyond
+            </p>
             <p className="text-lg text-muted-foreground mb-6">
-              You've decoded all the secret messages!
+              Five months down, a lifetime to explore. Priya, will you do me the honor of being my favorite adventure for the next month (and every month after)?
             </p>
             <button
               onClick={() => {

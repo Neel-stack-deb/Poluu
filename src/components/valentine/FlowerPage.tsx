@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import TulipIcon from './icons/TulipIcon';
-import DaisyIcon from './icons/DaisyIcon';
 import LilyIcon from './icons/LilyIcon';
 import FourLeafCloverIcon from './icons/FourLeafCloverIcon';
 import FlowerIcon from './icons/FlowerIcon';

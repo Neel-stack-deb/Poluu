@@ -44,8 +44,8 @@ const LoveLetterBuilder = () => {
 
   const templates = [
     {
-      title: 'Sweet & Simple',
-      content: 'My dearest,\n\nI wanted to tell you how much you mean to me...\n\nWith all my love,',
+      title: 'Month 5 Letter',
+      content: 'Priya,\n\nFive months ago, you walked into my world, and somehow you\'ve managed to turn ordinary days into my absolute favorite memories. It feels like both yesterday and an entire lifetime wrapped into one.\n\nThank you for the easy laughter, the random late-night chats, the warmth you bring every single day, and the way you make loving you feel like the most natural thing in the world. 150-something days with you, and my favorite place is still anywhere you are.\n\nYou\'ve made it through the clues, but there\'s one last prompt left...\n\nWith all my love,\nNeel',
     },
     {
       title: 'Romantic',

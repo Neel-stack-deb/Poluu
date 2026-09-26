@@ -120,10 +120,10 @@ const LoveLanguageQuiz = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <h1 className="text-4xl md:text-5xl font-heavy text-primary mb-4">
-            Love Language Quiz
+            The "Us Against the World" Trivia
           </h1>
           <p className="text-muted-foreground font-serif-italic">
-            Discover how you give and receive love
+            The Priya & Neel Certification Exam: Minimum passing score is 100%.
           </p>
         </motion.div>
 
@@ -177,7 +177,8 @@ const LoveLanguageQuiz = () => {
               animate={{ opacity: 1, scale: 1 }}
               className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-elevated"
             >
-              <h2 className="text-3xl font-medium mb-6 text-center">Your Love Language</h2>
+              <h2 className="text-3xl font-medium mb-6 text-center">Status: Fully Qualified Partner</h2>
+              <p className="text-center text-muted-foreground mb-8">5/5 stars. Certification renewed for Month 6.</p>
               
               {Object.entries(results)
                 .sort((a, b) => b[1] - a[1])

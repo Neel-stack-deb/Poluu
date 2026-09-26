@@ -396,10 +396,10 @@ const F1Racing = () => {
               textShadow: '0 0 30px rgba(255,0,0,0.8), 0 0 60px rgba(255,0,0,0.5)'
             }}
           >
-            FORMULA 1
+            THE 5-MONTH GRAND PRIX
           </h1>
           <p className="text-2xl text-gray-400 font-black tracking-widest">
-            GRAND PRIX
+            PRIYA'S FAST LAP
           </p>
         </motion.div>
 
@@ -482,6 +482,9 @@ const F1Racing = () => {
               <p className="text-sm text-gray-500 mt-6 font-bold">
                 💡 CONTROLS: UP/W = Accelerate • LEFT/RIGHT = Steer
               </p>
+              <p className="text-sm text-yellow-400 mt-3 font-bold">
+                TEAM RADIO: Box, box Priya! Clear track ahead. | PIT LANE: Emergency Boba / Coffee Refuel
+              </p>
             </div>
           </motion.div>
         ) : (
@@ -502,8 +505,8 @@ const F1Racing = () => {
                   <p className="text-2xl font-black text-yellow-400">{playerPosition}/6</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 font-bold mb-1">DISTANCE</p>
-                  <p className="text-2xl font-black text-green-400">{Math.round(position.z)}m</p>
+                  <p className="text-xs text-gray-400 font-bold mb-1">MONTH</p>
+                  <p className="text-2xl font-black text-green-400">{Math.min(5, Math.max(1, Math.floor(position.z / 40) + 1))}/5</p>
                 </div>
               </div>
             </div>
@@ -522,6 +525,7 @@ const F1Racing = () => {
                 {keys.right && '➡️ Turning Right'}
                 {!keys.up && !keys.left && !keys.right && 'Press UP/W to accelerate'}
               </p>
+              <p className="text-xs text-yellow-400 font-bold mt-2">Priya Pit Lane: Emergency Boba / Coffee Refuel</p>
             </div>
 
             {/* Reset Button */}
@@ -552,9 +556,9 @@ const F1Racing = () => {
               >
                 <div className="text-8xl mb-6">🏆</div>
                 <h2 className="text-6xl font-black text-white mb-4" style={{ textShadow: '0 0 30px rgba(255,255,0,0.8)' }}>
-                  RACE FINISHED!
+                  CHECKERED FLAG!
                 </h2>
-                <p className="text-4xl font-black text-yellow-400 mb-2">TIME: {formatTime(raceTime)}</p>
+                <p className="text-xl font-black text-yellow-400 mb-6">150+ days on track with zero mechanical failures (and only minor arguments about where to eat).</p>
                 {bestTime && raceTime < bestTime && (
                   <p className="text-green-400 font-black mb-6 text-3xl">🎉 NEW BEST TIME!</p>
                 )}

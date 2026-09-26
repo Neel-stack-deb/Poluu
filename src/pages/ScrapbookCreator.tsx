@@ -36,7 +36,7 @@ const ScrapbookCreator = () => {
       y: Math.random() * 300 + 50,
       width: type === 'text' ? 200 : type === 'sticker' ? 50 : 150,
       height: type === 'text' ? 100 : type === 'sticker' ? 50 : 150,
-      content: content || (type === 'text' ? 'Your text here' : ''),
+      content: content || (type === 'text' ? 'The Awkward-to-Comfortable Transition Phase.\n\nSubject continues to make ordinary days remarkably better.' : ''),
     };
 
     const updated = [...pages];
@@ -95,10 +95,10 @@ const ScrapbookCreator = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <h1 className="text-4xl md:text-5xl font-heavy text-primary mb-4">
-            Digital Scrapbook Creator
+            The Evidence Locker
           </h1>
           <p className="text-muted-foreground font-serif-italic">
-            Create beautiful memories together
+            Exhibit 1 through 5: five months of Priya & Neel
           </p>
         </motion.div>
 
@@ -115,6 +115,9 @@ const ScrapbookCreator = () => {
           >
             Add Text
           </button>
+          <div className="w-full text-sm text-muted-foreground">
+            Month 1: The Awkward-to-Comfortable Transition Phase. | Month 3: Peak Partner-in-Crime. | Month 5: Proof that time moves too fast when you're around.
+          </div>
           <button
             onClick={() => fileInputRef.current?.click()}
             className="px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20"
