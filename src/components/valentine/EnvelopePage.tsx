@@ -53,7 +53,7 @@ const EnvelopePage = ({ onComplete }: EnvelopePageProps) => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          I wrote something special, Gigi
+          I wrote something special, Priya
         </motion.p>
       </motion.div>
 

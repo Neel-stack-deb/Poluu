@@ -19,7 +19,7 @@ const LockPage = ({ onComplete, onAccessGranted }: LockPageProps) => {
     const { playSound } = useSound();
     const inputRef = useRef<HTMLInputElement>(null);
 
-    const VALID_NAMES = ['kie', 'kimberlee', 'gigi'];
+    const VALID_NAMES = ['priya', 'polu', 'mishti'];
 
     useEffect(() => {
         if (view === 'restricted' && countdown > 0) {
@@ -210,7 +210,7 @@ const LockPage = ({ onComplete, onAccessGranted }: LockPageProps) => {
                                 <div className="rounded-none overflow-hidden shadow-[0_0_80px_rgba(255,255,255,0.05)] border-4 border-white translate-y-0">
                                     <img
                                         src="/gigi/gigi main.png"
-                                        alt="Gigi"
+                                        alt="Priya"
                                         className="w-full h-auto object-cover"
                                     />
                                 </div>

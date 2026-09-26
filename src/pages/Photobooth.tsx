@@ -227,7 +227,7 @@ const Photobooth = () => {
             Photobooth
           </h1>
           <p className="text-muted-foreground font-serif-italic">
-            Capture beautiful moments with fun filters and templates, Gigi!
+            Capture beautiful moments with fun filters and templates, Priya!
           </p>
         </motion.div>
 

@@ -154,7 +154,7 @@ const Home = () => {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
           >
-            Welcome, Gigi
+            Welcome, Priya
           </motion.h1>
           <motion.p
             className="text-2xl md:text-3xl text-muted-foreground font-serif-italic mb-4"

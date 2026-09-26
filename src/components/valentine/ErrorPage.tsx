@@ -131,7 +131,7 @@ const ErrorPage = ({ onComplete }: ErrorPageProps) => {
           animate={{ opacity: 1 }}
           transition={{ delay: 2.5 }}
         >
-          But wait, <span className="text-[hsl(145,50%,60%)]">Gigi</span>...
+          But wait, <span className="text-[hsl(145,50%,60%)]">Mishti</span>...
         </motion.p>
         
         <motion.p

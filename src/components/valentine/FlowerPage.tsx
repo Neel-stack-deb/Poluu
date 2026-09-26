@@ -55,7 +55,7 @@ const FlowerPage = ({ onComplete }: FlowerPageProps) => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          These flowers bloom just for you, Gigi
+          These flowers bloom just for you, Priya
         </motion.p>
       </motion.div>
       
@@ -90,7 +90,7 @@ const FlowerPage = ({ onComplete }: FlowerPageProps) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 2.7 }}
           >
-            Your most favorite flower. Although u have lots of favorites, somehow it's Gigi's trademark. Tulips always remind me of your warmth. Just like how the sun radiates in your eyes, ahahaha, you look so beautiful. Being with you feels like coming home, always.
+            Your most favorite flower. Although u have lots of favorites, somehow it's Priya's trademark. Tulips always remind me of your warmth. Just like how the sun radiates in your eyes, ahahaha, you look so beautiful. Being with you feels like coming home, always.
           </motion.p>
         </motion.div>
         
@@ -145,7 +145,7 @@ const FlowerPage = ({ onComplete }: FlowerPageProps) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 3.7 }}
           >
-            This is your new favorite. I kept giving em to you, as they are as pretty as u :3 This is a Gigi flower and, aside from tulips, u r the only one in mind that comes across. Lilies feel delicate yet strong, just like you. I love how they reflect your beauty and I just cant explain u look so UGHHHH ESPECIALLY IF MAG FT TAYO! I love lilies din kasi pang bading yan na flower ehahahah anws. Every time I see them, I think of how lucky I am to have you in my life.
+            This is your new favorite. I kept giving em to you, as they are as pretty as u :3 This is a Mishti flower and, aside from tulips, u r the only one in mind that comes across. Lilies feel delicate yet strong, just like you. I love how they reflect your beauty and I just cant explain u look so UGHHHH ESPECIALLY IF MAG FT TAYO! I love lilies din kasi pang bading yan na flower ehahahah anws. Every time I see them, I think of how lucky I am to have you in my life.
           </motion.p>
         </motion.div>
         

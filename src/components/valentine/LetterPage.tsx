@@ -56,7 +56,7 @@ const LetterPage = ({ onComplete }: LetterPageProps) => {
         transition={{ duration: 0.6 }}
       >
         <h2 className="text-3xl md:text-4xl font-serif-italic text-foreground">
-          Gigi, this is for you.
+          Polu, this is for you.
         </h2>
         <p className="text-muted-foreground mt-2">Scratch to reveal what's inside.</p>
       </motion.div>

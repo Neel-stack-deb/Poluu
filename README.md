@@ -6,7 +6,7 @@ Interactive Valentine's web app: React, TypeScript, Three.js. Journey from a 404
 
 ```bash
 git clone <repo-url>
-cd a-gigi-surprise
+cd Poluu-main
 npm install
 npm run dev
 ```

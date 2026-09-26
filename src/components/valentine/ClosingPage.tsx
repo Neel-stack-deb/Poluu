@@ -67,7 +67,7 @@ const ClosingPage = ({ onReplay }: ClosingPageProps) => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.5, duration: 0.8 }}
         >
-          katto
+          Neel
         </motion.h1>
 
         {/* Decorative line */}

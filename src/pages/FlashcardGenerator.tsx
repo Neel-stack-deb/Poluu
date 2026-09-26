@@ -361,7 +361,7 @@ const FlashcardGenerator = () => {
             Flashcard Generator
           </h1>
           <p className="text-muted-foreground font-serif-italic">
-            Upload your lessons and I'll create flashcards for you, Gigi!
+            Upload your lessons and I'll create flashcards for you, Mishti!
           </p>
         </motion.div>
 

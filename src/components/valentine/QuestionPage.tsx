@@ -120,7 +120,7 @@ const QuestionPage = ({ onComplete }: QuestionPageProps) => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
               >
-                So, Gigi, I have one last question.
+                So, Polu, I have one last question.
               </motion.p>
 
               <motion.h2
