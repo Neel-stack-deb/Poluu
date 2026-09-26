@@ -15,32 +15,32 @@ const memories = [
   {
     id: 1,
     image: "/gigi/1.png",
-    caption: "u in scrubs!",
-    description: "imagine, kakasurgery mo lang and amoy kambing kana, you look so stunning dajasfjfajfsa damn baby",
+    caption: "Those beautiful eyes",
+    description: "Your eyes make even the busiest day feel soft and beautiful.",
   },
   {
     id: 2,
     image: "/gigi/2.png",
-    caption: "leopard dress!!",
-    description: "i love this leopard print dress u have - u have no idea how this pic has me in chokehold (as in)",
+    caption: "Your lovely curls",
+    description: "Your curly hair has its own little magic, and I could admire it forever.",
   },
   {
     id: 3,
     image: "/gigi/3.png",
-    caption: "My RC Girlie",
-    description: "kakagaling mo lang sa meeting ng rc and pagod ka pa neto, sobrang ganda mo talaga bawat anggulo.",
+    caption: "That cute smile",
+    description: "Your smile is my favorite kind of sunshine.",
   },
   {
     id: 4,
     image: "/gigi/4.png",
-    caption: "That Look...",
-    description: "u r so pretty esp when u look at me like that ashfhafssf i love u",
+    caption: "The way you look at me",
+    description: "One look from you is enough to make my whole heart smile.",
   },
   {
     id: 5,
     image: "/gigi/5.png",
-    caption: "Babby",
-    description: "uyyy babby lang man yan siya uy :(((",
+    caption: "Your sweet voice",
+    description: "Your voice is my favorite sound, especially when you say my name.",
   },
 ];
 
@@ -111,17 +111,15 @@ const MemoriesPage = ({ onComplete }: MemoriesPageProps) => {
       >
         <div className="space-y-4">
           <h1 className="text-5xl md:text-7xl font-heavy text-primary tracking-tight">
-            my valentine,
+            Mera Bachaa,
           </h1>
           <div className="h-1 w-24 bg-primary/20 mx-auto rounded-full" />
         </div>
 
         <p className="text-xl md:text-2xl text-muted-foreground font-serif-italic leading-relaxed px-4">
-          "you look beautiful even it times na pagod ka and usually pag nag facetime tayo,
-          i kept on complimenting u because ur pretty as hell... <br />
-          i always take pics of you every and they are stolen pics but after viewing it,
-          you look so good baby :( <br />
-          for now here are my top pics!"
+          "Your eyes, your curly hair, your cute smile, and your sweet voice make every moment with you unforgettable. <br />
+          These are little reminders of all the beautiful things I adore about you. <br />
+          Here are a few of my favorite moments, my Bachaa."
         </p>
 
         <motion.div
@@ -129,7 +127,7 @@ const MemoriesPage = ({ onComplete }: MemoriesPageProps) => {
           transition={{ duration: 2, repeat: Infinity }}
           className="pt-12 text-primary/30"
         >
-          <p className="text-sm font-bold uppercase tracking-[0.3em] mb-2">Relive our moments</p>
+            <p className="text-sm font-bold uppercase tracking-[0.3em] mb-2">A few things I adore about you</p>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="mx-auto">
             <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
           </svg>
@@ -152,10 +150,10 @@ const MemoriesPage = ({ onComplete }: MemoriesPageProps) => {
       >
         <div className="space-y-6 max-w-2xl mx-auto px-6">
           <p className="text-2xl md:text-3xl text-foreground font-serif-italic">
-            Every moment with you is a gift...
+            Every little thing about you is a gift...
           </p>
           <p className="text-muted-foreground mb-10">
-            But I have something even more special for you.
+            And I have something even more special for you.
           </p>
           <motion.button
             className="btn-romantic flex items-center gap-3 mx-auto px-10 py-5 text-xl shadow-romantic-lg"
