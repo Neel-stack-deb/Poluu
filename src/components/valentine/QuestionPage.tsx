@@ -21,13 +21,13 @@ const QuestionPage = ({ onComplete }: QuestionPageProps) => {
   const { playSound } = useSound();
 
   const noMessages = [
-    "ay di moko love?",
-    "say yes na please",
-    "hmp wala ka kithes",
-    "wala ka nang cuddle nakie nyajn",
-    "AAAAAAAAAAAA SURE KANA?",
-    "wawa ako nyan po",
-    "PRESS YES BAAAAA!!"
+    "Don't you love me?",
+    "say yes na please 🥺",
+    "Why so mean? 😢",
+    "don't make me beg 😭",
+    "AAAAAAAAAAAA You SURE Bhundu?",
+    "Don't you wanna cuddle",
+    "PRESS YES RAAAAA!!"
   ];
 
 
