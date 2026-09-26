@@ -22,9 +22,9 @@ const MusicPlaylist = () => {
   const { playSound } = useSound();
 
   const presetSongs: Song[] = [
-    { id: '1', title: 'Perfect', artist: 'Ed Sheeran', lyrics: 'I found a love for me...' },
-    { id: '2', title: 'All of Me', artist: 'John Legend', lyrics: 'What would I do without your smart mouth...' },
-    { id: '3', title: 'At Last', artist: 'Etta James', lyrics: 'At last, my love has come along...' },
+    { id: 'couple-1', title: 'Ok Jaanu', artist: 'Priya & Neel', url: '/couple_songs/Ok%20Jaanu.mp3' },
+    { id: 'couple-2', title: 'Tera Rasta Chodu Na', artist: 'Priya & Neel', url: '/couple_songs/Tera%20Rasta%20Chodu%20na.mp3' },
+    { id: 'couple-3', title: 'Tere Liye', artist: 'Priya & Neel', url: '/couple_songs/Tere%20Liye.mp3' },
   ];
 
   const addSong = () => {
@@ -187,6 +187,15 @@ const MusicPlaylist = () => {
                         >
                           {song.lyrics}
                         </motion.p>
+                      )}
+                      {song.url && (
+                        <audio
+                          className="w-full max-w-sm mt-3"
+                          controls
+                          preload="metadata"
+                          src={song.url}
+                          aria-label={`Play ${song.title}`}
+                        />
                       )}
                     </div>
                   </div>

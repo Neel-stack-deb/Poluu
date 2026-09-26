@@ -50,6 +50,7 @@ const SecretMessageDecoder = () => {
   const [solvedPuzzles, setSolvedPuzzles] = useState<number[]>([]);
   const [showHint, setShowHint] = useState(false);
   const [showReward, setShowReward] = useState(false);
+  const [showFirstMemory, setShowFirstMemory] = useState(false);
   const { playSound } = useSound();
 
   const decodeCaesar = (text: string, shift: number): string => {
@@ -77,7 +78,9 @@ const SecretMessageDecoder = () => {
       playSound('success');
       setTimeout(() => {
         setShowReward(false);
-        if (currentPuzzle < puzzles.length - 1) {
+        if (puzzle.id === 1) {
+          setShowFirstMemory(true);
+        } else if (currentPuzzle < puzzles.length - 1) {
           setCurrentPuzzle(currentPuzzle + 1);
           setUserAnswer('');
           setShowHint(false);
@@ -170,6 +173,20 @@ const SecretMessageDecoder = () => {
                 {currentPuzzle === 1 && 'Solved clue unlocks: Add your couple-song playlist here.'}
                 {currentPuzzle === 2 && 'Solved clue unlocks: The full love letter and final question.'}
               </p>
+              {currentPuzzle === 1 && (
+                <div className="space-y-3 mb-6">
+                  {[
+                    ['Ok Jaanu', '/couple_songs/Ok%20Jaanu.mp3'],
+                    ['Tera Rasta Chodu Na', '/couple_songs/Tera%20Rasta%20Chodu%20na.mp3'],
+                    ['Tere Liye', '/couple_songs/Tere%20Liye.mp3'],
+                  ].map(([title, source]) => (
+                    <div key={source} className="rounded-lg bg-primary/5 p-3">
+                      <p className="text-sm font-medium mb-2">{title}</p>
+                      <audio className="w-full" controls preload="metadata" src={source} aria-label={`Play ${title}`} />
+                    </div>
+                  ))}
+                </div>
+              )}
 
               <AnimatePresence>
                 {showHint && (
@@ -215,6 +232,36 @@ const SecretMessageDecoder = () => {
             </div>
           </motion.div>
         </AnimatePresence>
+
+        {showFirstMemory && (
+          <motion.div
+            className="mt-8 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-elevated text-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+          >
+            <p className="text-sm uppercase tracking-widest text-primary mb-4">Access Granted: First Memory Unlocked</p>
+            <div className="bg-white p-4 shadow-lg max-w-sm mx-auto rotate-[-2deg]">
+              <img
+                src="/gigi/1.png"
+                alt="Priya and Neel's first memory"
+                className="w-full aspect-square object-cover"
+              />
+              <p className="font-serif-italic text-foreground mt-4">Where time officially started: April 26</p>
+            </div>
+            <button
+              onClick={() => {
+                setShowFirstMemory(false);
+                setCurrentPuzzle(1);
+                setUserAnswer('');
+                setShowHint(false);
+                playSound('sparkle');
+              }}
+              className="mt-8 px-8 py-3 btn-romantic"
+            >
+              Continue to clue 2
+            </button>
+          </motion.div>
+        )}
 
         {/* Completion */}
         {solvedPuzzles.length === puzzles.length && (

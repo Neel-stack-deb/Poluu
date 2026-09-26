@@ -7,12 +7,15 @@ import MemoriesPage from './MemoriesPage';
 import FlowerPage from './FlowerPage';
 import QuestionPage from './QuestionPage';
 import ClosingPage from './ClosingPage';
+import CoupleSongsPage from './CoupleSongsPage';
+import DateAndFoodPage from './DateAndFoodPage';
+import AudioTransmissionPage from './AudioTransmissionPage';
 import BackgroundMusic from './BackgroundMusic';
 import CursorTrail from './CursorTrail';
 import InteractiveSparkles from './InteractiveSparkles';
 import LockPage from './LockPage';
 
-type Page = 'lock' | 'error' | 'envelope' | 'letter' | 'memories' | 'flowers' | 'question' | 'closing';
+type Page = 'lock' | 'error' | 'envelope' | 'letter' | 'memories' | 'flowers' | 'songs' | 'date-food' | 'audio' | 'question' | 'closing';
 
 
 
@@ -118,7 +121,43 @@ const ValentineApp = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <FlowerPage onComplete={() => goToPage('question')} />
+            <FlowerPage onComplete={() => goToPage('songs')} />
+          </motion.div>
+        )}
+
+        {currentPage === 'songs' && (
+          <motion.div
+            key="songs"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <CoupleSongsPage onComplete={() => goToPage('date-food')} />
+          </motion.div>
+        )}
+
+        {currentPage === 'date-food' && (
+          <motion.div
+            key="date-food"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <DateAndFoodPage onComplete={() => goToPage('audio')} />
+          </motion.div>
+        )}
+
+        {currentPage === 'audio' && (
+          <motion.div
+            key="audio"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <AudioTransmissionPage onComplete={() => goToPage('question')} />
           </motion.div>
         )}
 

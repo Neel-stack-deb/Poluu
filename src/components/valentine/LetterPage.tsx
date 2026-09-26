@@ -12,12 +12,14 @@ interface LetterPageProps {
 const LetterPage = ({ onComplete }: LetterPageProps) => {
   const [revealProgress, setRevealProgress] = useState(0);
   const [showContinue, setShowContinue] = useState(false);
+  const [showLetter, setShowLetter] = useState(false);
   const { playSound } = useSound();
 
   const handleRevealProgress = (progress: number) => {
     setRevealProgress(progress);
     if (progress >= 85 && !showContinue) {
       setShowContinue(true);
+      setShowLetter(true);
       playSound('success');
       playSound('sparkle');
     }
@@ -77,8 +79,7 @@ const LetterPage = ({ onComplete }: LetterPageProps) => {
               Hi, Babby!,
             </h2>
             <p className="text-foreground/90 leading-relaxed text-sm italic px-2">
-              'it's almost valentines day,
-              this is my small surprise for you and i hope you'll like it baby,"
+              I know it has been a long due but I hope you like it babe ❤️
             </p>
 
             <motion.div
@@ -116,6 +117,39 @@ const LetterPage = ({ onComplete }: LetterPageProps) => {
           </div>
         )}
       </motion.div>
+
+      {showLetter && (
+        <motion.div
+          className="fixed inset-0 z-30 flex items-center justify-center bg-black/35 px-4 py-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <motion.div
+            className="max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white px-6 py-8 text-foreground shadow-2xl md:px-12"
+            initial={{ opacity: 0, y: 30, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ type: 'spring', damping: 20 }}
+          >
+            <p className="mb-6 text-center text-sm uppercase tracking-[0.25em] text-primary">A letter from Neel</p>
+            <div className="whitespace-pre-line text-left font-serif-italic text-lg leading-relaxed text-foreground/85">
+              {`Priya,\n\nFive months ago, you walked into my world, and somehow you've managed to turn ordinary days into my absolute favorite memories. It feels like both yesterday and an entire lifetime wrapped into one.\n\nThank you for the easy laughter, the random late-night chats, the warmth you bring every single day, and the way you make loving you feel like the most natural thing in the world. 150-something days with you, and my favorite place is still anywhere you are.\n\nYou've made it through the clues, but there's one last prompt left...`}
+            </div>
+            <motion.div
+              className="mt-8 flex justify-center"
+              animate={{ scale: [1, 1.12, 1] }}
+              transition={{ duration: 1.8, repeat: Infinity }}
+            >
+              <HeartIcon size={34} color="hsl(145, 40%, 55%)" animate />
+            </motion.div>
+            <button
+              className="btn-romantic mx-auto mt-8 block"
+              onClick={() => setShowLetter(false)}
+            >
+              Continue the surprise
+            </button>
+          </motion.div>
+        </motion.div>
+      )}
 
       {/* Continue Button - only shows at 85% */}
       {showContinue && (

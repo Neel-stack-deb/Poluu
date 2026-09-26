@@ -156,6 +156,25 @@ const VoiceRecorder = () => {
           For late nights, stressful days, or whenever you need to be reminded how loved you are. Press play.
         </p>
 
+        <motion.div
+          className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-elevated mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+        >
+          <h2 className="text-xl font-medium mb-2">Recorded Prompt</h2>
+          <p className="text-sm text-muted-foreground mb-4">
+            A little reminder from Neel, saved for whenever you need it.
+          </p>
+          <audio
+            className="w-full"
+            controls
+            preload="metadata"
+            src="/Voice_Recorder/Tere%20Liye.mp3"
+            aria-label="Recorded prompt for Priya"
+          />
+        </motion.div>
+
         {/* Recorder */}
         <motion.div
           className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-elevated mb-8 text-center"
